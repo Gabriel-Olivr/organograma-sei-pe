@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Login - Portal SEE/PE</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        h2 { color: #0088cc; margin-bottom: 20px; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #0088cc; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        button:hover { background-color: #006699; }
+        #erro-msg { color: red; margin-top: 10px; display: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class='login-container'>
+        <h2>Acesso Restrito - SEI</h2>
+        <input type='email' id='email' placeholder='E-mail do Administrador' required>
+        <input type='password' id='senha' placeholder='Senha' required>
+        <button id='btn-login'>Entrar no Painel</button>
+        <p id='erro-msg'>Usuário ou senha incorretos.</p>
+    </div>
+
+    <script type='module'>
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
+
+        const firebaseConfig = {
+            apiKey: 'AIzaSyD7j4SZhtFBjPeAuFEMEK6fnzP9r_HTYT8',
+            authDomain: 'organograma-see-pe.firebaseapp.com',
+            projectId: 'organograma-see-pe',
+            storageBucket: 'organograma-see-pe.firebasestorage.app',
+            messagingSenderId: '471766110154',
+            appId: '1:471766110154:web:a2154af1fb9096fd384933'
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById('btn-login').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const erroMsg = document.getElementById('erro-msg');
+
+            signInWithEmailAndPassword(auth, email, senha)
+                .then(() => { window.location.href = 'organograma.html'; })
+                .catch((error) => {
+                    erroMsg.style.display = 'block';
+                    console.error(error.message);
+                });
+        });
+    </script>
+</body>
+</html>
