@@ -63,7 +63,7 @@ namespace Organograma_SEI_SEE
         
         .header-logos { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; margin-bottom: 30px; pointer-events: none; }
         .umct-logo-container { width: 95%; display: flex; align-items: center; justify-content: center; overflow: visible; padding: 10px 0; }
-        .umct-logo-img { width: 90%; height: auto; max-height: 250px; object-fit: contain; }
+        .umct-logo-img { width: 100%; height: auto; max-height: 400px; object-fit: contain; }
         .see-logo { height: 75px; max-width: 85%; object-fit: contain; margin-top: 10px; }
 
         .login-box { background: #f8f9fa; padding: 40px; border-radius: 12px; width: 80%; max-width: 320px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
