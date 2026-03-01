@@ -195,13 +195,9 @@ namespace Organograma_SEI_SEE
         {
             GarantirPastaExiste();
 
-            // ÍCONE DE ENGRENAGEM AJMAL NAHA (FLATICON) - CÓDIGO OFICIAL CONVERTIDO
-            string iconGear = "<svg viewBox='0 0 512 512' width='16' height='16' fill='currentColor'><path d='M487.4 315.7l-42.6-24.6c2.3-11.7 3.5-23.8 3.5-36.1s-1.2-24.4-3.5-36.1l42.6-24.6c19.6-11.3 26.3-36.4 15-56l-40-69.3c-11.3-19.6-36.4-26.3-56-15l-42.6 24.6c-19.1-13.3-40-23.7-62.2-30.8V0h-80v47.7c-22.2 7.1-43.1 17.5-62.2 30.8L118.6 54c-19.6-11.3-44.7-4.6-56 15l-40 69.3c-11.3 19.6-4.6 44.7 15 56l42.6 24.6C57.9 230.6 56.7 242.7 56.7 255s1.2 24.4 3.5 36.1l-42.6 24.6c-19.6 11.3-26.3 36.4-15 56l40 69.3c11.3 19.6 36.4 26.3 56 15l42.6-24.6c19.1 13.3 40 23.7 62.2 30.8V512h80v-47.7c22.2-7.1 43.1-17.5 62.2-30.8l42.6 24.6c19.6 11.3 44.7 4.6 56-15l40-69.3c11.4-19.6 4.7-44.7-14.9-56.1zM256 360c-57.9 0-105-47.1-105-105s47.1-105 105-105 105 47.1 105 105-47.1 105-105 105z'/></svg>";
-            
+            string iconGear = "<img src='https://cdn-icons-png.flaticon.com/512/5046/5046461.png' width='16' height='16' alt='' title='' class='img-small'>";
             string iconLogout = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path><polyline points='16 17 21 12 16 7'></polyline><line x1='21' y1='12' x2='9' y2='12'></line></svg>";
-            string iconGithub = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path></svg>";
-            string iconLinkedin = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'></path><rect x='2' y='9' width='4' height='12'></rect><circle cx='4' cy='4' r='2'></circle></svg>";
-            string iconResetButton = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'></path><polyline points='3 3 3 8 8 8'></polyline></svg>";
+            string iconGithub = "<img src='https://cdn-icons-png.flaticon.com/512/733/733609.png' width='16' height='16' alt='GitHub' title='GitHub' class='img-small'>";            string iconLinkedin = "<img src='https://cdn-icons-png.flaticon.com/512/1384/1384072.png' width='16' height='16' alt='LinkedIn' title='LinkedIn' class='img-small'>";            string iconResetButton = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'></path><polyline points='3 3 3 8 8 8'></polyline></svg>";
             string iconEyeOpen = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg>";
 
             StringBuilder sb = new StringBuilder();
@@ -326,25 +322,29 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("  <div class='modal-content'>");
             sb.AppendLine("    <button class='modal-close' style='position:absolute; right:15px; top:15px; border:none; background:none; font-size:20px; cursor:pointer;' onclick='fecharModal()'>×</button>");
             sb.AppendLine("    <h2>Configurações do Perfil</h2>");
+            
+            // SESSÃO 1: PERFIL
             sb.AppendLine("    <div class='form-group'><label>Nome de Exibição:</label><input type='text' id='input-new-name'></div>");
             sb.AppendLine("    <div class='form-group'><label>Nova Foto (Arquivo):</label><input type='file' id='input-photo-file' accept='image/*'></div>");
             sb.AppendLine("    <div class='crop-container' id='crop-container'><img id='crop-image' src=''></div>");
+            sb.AppendLine("    <button class='btn-save-settings' onclick='salvarPerfil()'>Salvar Perfil</button>");
+            sb.AppendLine("    <div id='modal-msg-perfil' style='margin-top:10px; font-size:13px; text-align:center; display:none;'></div>");
             sb.AppendLine("    <hr style='border:none; border-top:1px solid #eee; margin: 20px 0;'>");
-            sb.AppendLine("    <h3 style='font-size:14px; color:#555; margin-top:0; margin-bottom:15px;'>Alterar Senha de Acesso</h3>");
-            sb.AppendLine("    <div class='form-group'><label>Senha Atual:</label><div class='pass-wrapper'><input type='password' id='input-current-pass'><span class='eye-icon' onclick='toggleEye(\"input-current-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
-            sb.AppendLine("    <div class='form-group'><label>Nova Senha:</label><div class='pass-wrapper'><input type='password' id='input-new-pass' placeholder='Mínimo de 6 caracteres'><span class='eye-icon' onclick='toggleEye(\"input-new-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
-            sb.AppendLine("    <div class='form-group'><label>Confirmar Nova Senha:</label><div class='pass-wrapper'><input type='password' id='input-confirm-pass'><span class='eye-icon' onclick='toggleEye(\"input-confirm-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
-            sb.AppendLine("    <button class='btn-save-settings' onclick='salvarConfiguracoes()'>Salvar Alterações</button>");
-            sb.AppendLine("    <div id='modal-msg' style='margin-top:10px; font-size:13px; text-align:center; display:none;'></div>");
+            
+            // SESSÃO 2: SENHA
+            sb.AppendLine("    <button class='btn-save-settings' style='background:#6c757d; margin-top:0;' onclick='toggleSenhaSection()'>Trocar Senha de Acesso</button>");
+            sb.AppendLine("    <div id='senha-section' style='display:none; margin-top:15px; padding:15px; background:#f8f9fa; border-radius:8px; border:1px solid #ddd;'>");
+            sb.AppendLine("      <h3 style='font-size:14px; color:#555; margin-top:0; margin-bottom:15px;'>Segurança</h3>");
+            sb.AppendLine("      <div class='form-group'><label>Senha Atual:</label><div class='pass-wrapper'><input type='password' id='input-current-pass'><span class='eye-icon' onclick='toggleEye(\"input-current-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
+            sb.AppendLine("      <div class='form-group'><label>Nova Senha:</label><div class='pass-wrapper'><input type='password' id='input-new-pass' placeholder='Mínimo de 6 caracteres'><span class='eye-icon' onclick='toggleEye(\"input-new-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
+            sb.AppendLine("      <div class='form-group'><label>Confirmar Nova Senha:</label><div class='pass-wrapper'><input type='password' id='input-confirm-pass'><span class='eye-icon' onclick='toggleEye(\"input-confirm-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
+            sb.AppendLine("      <button class='btn-save-settings' style='background:#28a745;' onclick='salvarSenha()'>Atualizar Senha</button>");
+            sb.AppendLine("      <div id='modal-msg-senha' style='margin-top:10px; font-size:13px; text-align:center; display:none;'></div>");
+            sb.AppendLine("    </div>");
             sb.AppendLine("  </div>");
             sb.AppendLine("</div>");
 
-            sb.AppendLine("<div class='zoom-controls'>");
-            sb.AppendLine("  <button onclick='mudarZoom(0.2)' title='Aproximar'>+</button>");
-            sb.AppendLine("  <button onclick='mudarZoom(-0.2)' title='Afastar'>-</button>");
-            sb.AppendLine($"  <button class='reset-btn' onclick='recolherTudo()' title='Recolher Organograma e Centralizar'>{iconResetButton}</button>");
-            sb.AppendLine("</div>");
-
+            // SESSÃO 3: ASSINATURA
             sb.AppendLine("<div class='watermark'>");
             sb.AppendLine("  <div class='watermark-title'>Automatizado e Desenvolvido por <strong>Gabriel Arruda</strong></div>");
             sb.AppendLine("  <div class='watermark-links'>");
@@ -422,9 +422,12 @@ namespace Organograma_SEI_SEE
 
         let cropper = null; let finalImageBase64 = null;
         document.getElementById('btn-open-modal').addEventListener('click', () => document.getElementById('settings-modal').style.display = 'flex');
+       
         window.fecharModal = () => { 
             document.getElementById('settings-modal').style.display = 'none'; 
-            document.getElementById('modal-msg').style.display = 'none'; 
+            document.getElementById('modal-msg-perfil').style.display = 'none'; 
+            document.getElementById('modal-msg-senha').style.display = 'none'; 
+            document.getElementById('senha-section').style.display = 'none';
             if(cropper) { cropper.destroy(); cropper = null; } 
             document.getElementById('crop-container').style.display = 'none'; 
             document.getElementById('input-photo-file').value = ''; 
@@ -433,53 +436,73 @@ namespace Organograma_SEI_SEE
             document.getElementById('input-confirm-pass').value = '';
         };
 
-        document.getElementById('input-photo-file').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if(file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    const img = document.getElementById('crop-image');
-                    img.src = event.target.result;
-                    document.getElementById('crop-container').style.display = 'block';
-                    if(cropper) cropper.destroy();
-                    cropper = new Cropper(img, { aspectRatio: 1, viewMode: 1, autoCropArea: 1 });
-                };
-                reader.readAsDataURL(file);
-            }
-        });
+        window.toggleSenhaSection = function() {
+            const section = document.getElementById('senha-section');
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        };
 
-        window.salvarConfiguracoes = async function() {
+        // Função exclusiva para Salvar NOME e FOTO
+        window.salvarPerfil = async function() {
             const user = auth.currentUser;
             const newName = document.getElementById('input-new-name').value.trim();
-            const currentPass = document.getElementById('input-current-pass').value;
-            const newPass = document.getElementById('input-new-pass').value;
-            const confirmPass = document.getElementById('input-confirm-pass').value;
-            const msgBox = document.getElementById('modal-msg');
-            msgBox.style.display = 'block'; msgBox.style.color = '#0088cc'; msgBox.innerText = 'Processando...';
+            const msgBox = document.getElementById('modal-msg-perfil');
+            
+            msgBox.style.display = 'block'; msgBox.style.color = '#0088cc'; msgBox.innerText = 'Salvando perfil...';
 
             if(cropper) finalImageBase64 = cropper.getCroppedCanvas({width: 80, height: 80}).toDataURL('image/jpeg', 0.4);
 
             try {
-                if(currentPass || newPass || confirmPass) {
-                    if(!currentPass) { msgBox.style.color = 'red'; msgBox.innerText = 'Digite sua Senha Atual para autorizar a mudança.'; return; }
-                    if(newPass !== confirmPass) { msgBox.style.color = 'red'; msgBox.innerText = 'As novas senhas não coincidem!'; return; }
-                    if(newPass.length < 6) { msgBox.style.color = 'red'; msgBox.innerText = 'A nova senha precisa ter no mínimo 6 caracteres.'; return; }
-                    
-                    const credential = EmailAuthProvider.credential(user.email, currentPass);
-                    await reauthenticateWithCredential(user, credential);
-                    await updatePassword(user, newPass);
-                }
-
                 let updates = {};
                 if(newName !== user.displayName) updates.displayName = newName;
                 if(finalImageBase64) {
                     localStorage.setItem('avatar_' + user.email, finalImageBase64);
                     updates.photoURL = finalImageBase64;
                 }
+                
                 if(Object.keys(updates).length > 0) await updateProfile(user, updates);
                 
-                msgBox.style.color = 'green'; msgBox.innerText = 'Tudo atualizado com sucesso!';
+                msgBox.style.color = 'green'; msgBox.innerText = 'Perfil atualizado com sucesso!';
                 setTimeout(() => window.location.reload(), 1200);
+
+            } catch(error) { 
+                console.error(error);
+                msgBox.style.color = 'red'; 
+                msgBox.innerText = 'Erro ao atualizar o perfil.'; 
+            }
+        };
+
+        // Função exclusiva para Salvar a SENHA!!!!
+        window.salvarSenha = async function() {
+            const user = auth.currentUser;
+            const currentPass = document.getElementById('input-current-pass').value;
+            const newPass = document.getElementById('input-new-pass').value;
+            const confirmPass = document.getElementById('input-confirm-pass').value;
+            const msgBox = document.getElementById('modal-msg-senha');
+            
+            msgBox.style.display = 'block'; msgBox.style.color = '#0088cc'; msgBox.innerText = 'Autenticando e trocando senha...';
+
+            if(!currentPass) { msgBox.style.color = 'red'; msgBox.innerText = 'Digite sua Senha Atual.'; return; }
+            if(!newPass || !confirmPass) { msgBox.style.color = 'red'; msgBox.innerText = 'Preencha a nova senha.'; return; }
+            if(newPass !== confirmPass) { msgBox.style.color = 'red'; msgBox.innerText = 'As novas senhas não coincidem!'; return; }
+            if(newPass.length < 6) { msgBox.style.color = 'red'; msgBox.innerText = 'A nova senha precisa ter no mínimo 6 caracteres.'; return; }
+
+            try {
+                const credential = EmailAuthProvider.credential(user.email, currentPass);
+                await reauthenticateWithCredential(user, credential);
+                await updatePassword(user, newPass);
+                
+                msgBox.style.color = 'green'; msgBox.innerText = 'Senha alterada com sucesso!';
+                
+                // Limpa os campos de senha por segurança
+                document.getElementById('input-current-pass').value = '';
+                document.getElementById('input-new-pass').value = '';
+                document.getElementById('input-confirm-pass').value = '';
+                
+                // Esconde a aba de senha depois de 2 segundos
+                setTimeout(() => { 
+                    document.getElementById('senha-section').style.display = 'none'; 
+                    msgBox.style.display = 'none'; 
+                }, 2000);
 
             } catch(error) { 
                 console.error(error);
@@ -623,7 +646,7 @@ namespace Organograma_SEI_SEE
         let currentZoom = 1;
         window.mudarZoom = (amount) => { currentZoom += amount; if(currentZoom < 0.3) currentZoom = 0.3; if(currentZoom > 2.0) currentZoom = 2.0; document.getElementById('tree-wrapper').style.transform = `scale(${currentZoom})`; };
         
-        // RESET ABSOLUTO: RECOLHE TUDO E CENTRALIZA NA CAIXA RAIZ (SEE) FECHADA
+        // RESET: RECOLHE TUDO E CENTRALIZA A CAIXA RAIZ (SEE) FECHADA
         window.recolherTudo = () => { 
             try {
                 fecharSidebar();
