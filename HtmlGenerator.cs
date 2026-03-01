@@ -110,7 +110,7 @@ namespace Organograma_SEI_SEE
                 <div class='umct-logo-container'>
                     <img src='Nova Logo_UMCT.png' alt='Logo UMCT' class='umct-logo-img'>
                 </div>
-                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2021/01/logo_Secretaria-de-Educacao-1.png' alt='Logo SEE PE' class='see-logo'>
+                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/logo_Secretaria-de-Educacao_CMYK_para-fundo-branco-2-scaled.png' alt='Logo SEE PE' class='see-logo'>
             </div>
 
             <div class='login-box'>

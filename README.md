@@ -5,7 +5,7 @@
 ![Frontend](https://img.shields.io/badge/Web-HTML5%20%2F%20CSS3%20%2F%20JS-orange)
 ![Security](https://img.shields.io/badge/Security-Firebase%20Auth-yellow)
 
-Plataforma institucional de visualização dinâmica da estrutura organizacional da **Secretaria de Educação de Pernambuco (SEE)**, inspirada na [Estrutura Organizacional SEI SEE-PE](https://estruturasei.pe.gov.br/), assim ganhando uma repaginação e com novas funcionalidades.
+Plataforma institucional de visualização dinâmica da estrutura organizacional da **Secretaria de Educação de Pernambuco (SEE)**, inspirada na [Estrutura Organizacional SEI SEE-PE](https://estruturasei.pe.gov.br/), assim ganhando uma repaginação e com novas funcionalidades [veja aqui](https://gabriel-olivr.github.io/organograma-sei-pe/).
 
 ---
 
@@ -46,9 +46,8 @@ O sistema é gerado dinamicamente pela classe `HtmlGenerator.cs`, que produz doi
 
 ---
 
-## Redes Sociais
+## Autor: [Gabriel Estevam]
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=30A3DC)](https://www.linkedin.com/in/gabriel-oliveira-773743346/) 
-[![Github](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://github.com/Gabriel-Olivr) 
 [![DIO](https://img.shields.io/badge/-DIO-000?style=for-the-badge&logoColor=30A3DC)](https://web.dio.me/users/gabrielolivr_16?tab=achievements)
 
