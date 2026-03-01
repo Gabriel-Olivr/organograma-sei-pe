@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Organograma_SEI_SEE.Models;
 
+#region HTML
 namespace Organograma_SEI_SEE
 {
     public static class HtmlGenerator
@@ -681,7 +682,7 @@ namespace Organograma_SEI_SEE
             string caminhoArquivo = Path.Combine(PastaHtml, "organograma.html");
             File.WriteAllText(caminhoArquivo, sb.ToString());
         }
-
+#endregion
         private static void RenderizarSetorHtml(Setor setor, StringBuilder html)
         {
             string clsRecolhido = "collapsed"; 
