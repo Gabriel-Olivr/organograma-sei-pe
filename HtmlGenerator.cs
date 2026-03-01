@@ -129,7 +129,7 @@ namespace Organograma_SEI_SEE
                 <p id='erro-msg'>Usuário ou senha incorretos.</p>
             </div>
 
-            <a href='https://wa.me/+5581981283538?text=Olá Gabriel, tudo bem? Esqueci minha senha, pode me ajudar?' target='_blank' class='forgot-pass'>Esqueceu sua senha? Solicite ajuda.</a>
+            <a href='https://wa.me/+5581900000000?text=Olá Gabriel, tudo bem? Esqueci minha senha, pode me ajudar?' target='_blank' class='forgot-pass'>Esqueceu sua senha? Solicite ajuda.</a>
         </div>
     </div>
 
