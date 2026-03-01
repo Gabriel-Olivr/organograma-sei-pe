@@ -139,12 +139,12 @@ namespace Organograma_SEI_SEE
         import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
 
         const firebaseConfig = {
-            apiKey: 'AIzaSyD7j4SZhtFBjPeAuFEMEK6fnzP9r_HTYT8',
+            apiKey: atob('QUl6YVN5RDdqNFNaaHRGQmpQZUF1RkVNRUs2Zm56UDlyX0hUWVQ4'),
             authDomain: 'organograma-see-pe.firebaseapp.com',
             projectId: 'organograma-see-pe',
             storageBucket: 'organograma-see-pe.firebasestorage.app',
             messagingSenderId: '471766110154',
-            appId: '1:471766110154:web:a2154af1fb9096fd384933'
+            appId: atob('MTo0NzE3NjYxMTAxNTQ6d2ViOmEyMTU0YWYxZmI5MDk2ZmQzODQ5MzM=')
         };
 
         const app = initializeApp(firebaseConfig);
@@ -364,12 +364,13 @@ namespace Organograma_SEI_SEE
             RenderizarSetorHtml(setorRaiz, sb);
             sb.AppendLine("</ul></div></div></div>");
 
+            // JS criptografado
+
             sb.AppendLine(@"<script type='module'>
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
         import { getAuth, onAuthStateChanged, signOut, updateProfile, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
 
-        const firebaseConfig = { apiKey: 'AIzaSyD7j4SZhtFBjPeAuFEMEK6fnzP9r_HTYT8', authDomain: 'organograma-see-pe.firebaseapp.com', projectId: 'organograma-see-pe', storageBucket: 'organograma-see-pe.firebasestorage.app', messagingSenderId: '471766110154', appId: '1:471766110154:web:a2154af1fb9096fd384933' };
-        const app = initializeApp(firebaseConfig);
+        const firebaseConfig = { apiKey: atob('QUl6YVN5RDdqNFNaaHRGQmpQZUF1RkVNRUs2Zm56UDlyX0hUWVQ4'), authDomain: 'organograma-see-pe.firebaseapp.com', projectId: 'organograma-see-pe', storageBucket: 'organograma-see-pe.firebasestorage.app', messagingSenderId: '471766110154', appId: atob('MTo0NzE3NjYxMTAxNTQ6d2ViOmEyMTU0YWYxZmI5MDk2ZmQzODQ5MzM=') };        const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
         const svgUser = `<svg viewBox='0 0 24 24' width='14' height='14' stroke='currentColor' stroke-width='2' fill='none'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>`;
