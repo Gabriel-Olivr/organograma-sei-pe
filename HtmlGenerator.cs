@@ -197,8 +197,11 @@ namespace Organograma_SEI_SEE
 
             string iconGear = "<img src='https://cdn-icons-png.flaticon.com/512/5046/5046461.png' width='16' height='16' alt='' title='' class='img-small'>";
             string iconLogout = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path><polyline points='16 17 21 12 16 7'></polyline><line x1='21' y1='12' x2='9' y2='12'></line></svg>";
-            string iconGithub = "<img src='https://cdn-icons-png.flaticon.com/512/733/733609.png' width='16' height='16' alt='GitHub' title='GitHub' class='img-small'>";            string iconLinkedin = "<img src='https://cdn-icons-png.flaticon.com/512/1384/1384072.png' width='16' height='16' alt='LinkedIn' title='LinkedIn' class='img-small'>";            string iconResetButton = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'></path><polyline points='3 3 3 8 8 8'></polyline></svg>";
+            string iconGithub = "<img src='https://cdn-icons-png.flaticon.com/512/733/733609.png' width='16' height='16' alt='GitHub' title='GitHub' class='img-small'>";            
+            string iconLinkedin = "<img src='https://cdn-icons-png.flaticon.com/512/1384/1384072.png' width='16' height='16' alt='LinkedIn' title='LinkedIn' class='img-small'>";            
+            string iconResetButton = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'></path><polyline points='3 3 3 8 8 8'></polyline></svg>";
             string iconEyeOpen = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg>";
+            string iconPadlock = "<img src='https://cdn-icons-png.flaticon.com/512/11560/11560656.png' width='18' height='18' alt='' title='' style='vertical-align: middle;'>";
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><title>Organograma SEI</title>");
@@ -248,19 +251,23 @@ namespace Organograma_SEI_SEE
             sb.AppendLine(".eye-icon { position: absolute; right: 10px; cursor: pointer; color: #888; display: flex; }");
             sb.AppendLine(".eye-icon:hover { color: #0088cc; }");
             sb.AppendLine(".form-group input[type='text'], .form-group input[type='file'] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 13px; }");
-            sb.AppendLine(".crop-container { width: 100%; max-height: 250px; margin-top: 10px; display: none; background: #eee; border-radius: 8px; overflow: hidden; }");
-            sb.AppendLine(".btn-save-settings { width: 100%; padding: 10px; background: #0088cc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 10px; font-size: 14px; }");
+            sb.AppendLine(".crop-container { width: 100%; max-height: 300px; margin-top: 10px; display: none; background: #eee; border-radius: 8px; }");
+            sb.AppendLine("#crop-image { display: block; max-width: 100%; }"); 
+            sb.AppendLine(".btn-save-settings { width: 100%; padding: 10px; background: #0088cc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 10px; font-size: 14px; transition: 0.2s; }");
+            sb.AppendLine(".btn-save-settings:hover { opacity: 0.9; }");
+            sb.AppendLine(".btn-toggle-senha { width: 100%; padding: 10px; background: #ffffff; color: #333; border: 1px solid #ccc; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 0; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s, border-color 0.2s; }");
+            sb.AppendLine(".btn-toggle-senha:hover { background: #f8f9fa; border-color: #aaa; }");
             sb.AppendLine(".watermark { position: fixed; bottom: 15px; right: 20px; font-size: 12px; color: #666; z-index: 1000; background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border: 1px solid #ddd; transition: all 0.3s ease; overflow: hidden; height: 18px; display: flex; flex-direction: column; pointer-events: auto; cursor: default; }");
             sb.AppendLine(".watermark:hover { height: 75px; border-color: #0088cc; }");
             sb.AppendLine(".watermark-links { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; opacity: 0; transition: opacity 0.3s; }");
             sb.AppendLine(".watermark:hover .watermark-links { opacity: 1; }");
             sb.AppendLine(".watermark-links a { text-decoration: none; color: #333; font-weight: bold; display: flex; align-items: center; gap: 5px; }");
-            sb.AppendLine(".zoom-controls { position: fixed; bottom: 30px; left: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }");
-            sb.AppendLine(".zoom-controls button { width: 40px; height: 40px; background: #f0f2f5; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-size: 18px; font-weight: bold; color: #333; display: flex; align-items: center; justify-content: center; padding: 0; transition: 0.2s; }");
+            sb.AppendLine(".zoom-controls { position: fixed; bottom: 30px; left: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); user-select: none; -webkit-user-select: none; }");
+            sb.AppendLine(".zoom-controls button { width: 40px; height: 40px; background: #f0f2f5; border: 1px solid #ccc; border-radius: 4px; cursor: pointer !important; font-size: 18px; font-weight: bold; color: #333; display: flex; align-items: center; justify-content: center; padding: 0; transition: 0.2s; user-select: none !important; -webkit-user-select: none !important; outline: none; }");
             sb.AppendLine(".zoom-controls button:hover { background: #e0e4e8; }");
-            sb.AppendLine("#map-container { position: absolute; top: 60px; left: 0; width: 100vw; height: calc(100vh - 60px); overflow: auto; cursor: grab; background-color: #f4f7f6; box-sizing: border-box; scroll-behavior: smooth; }");
-            sb.AppendLine("#map-container:active { cursor: grabbing; scroll-behavior: auto; }");
-            sb.AppendLine(".tree-wrapper { transform-origin: top center; transition: transform 0.3s ease; padding: 40vh 50vw; display: inline-block; min-width: 100%; box-sizing: border-box; }"); 
+            sb.AppendLine("#map-container { position: absolute; top: 60px; left: 0; width: 100vw; height: calc(100vh - 60px); overflow: auto; cursor: grab; background-color: #f4f7f6; box-sizing: border-box; }");
+            sb.AppendLine("#map-container:active { cursor: grabbing; }");
+            sb.AppendLine(".tree-wrapper { transform-origin: 0 0; transition: transform 0.3s ease; padding: 40vh 50vw; display: inline-block; min-width: 100%; box-sizing: border-box; }"); 
             sb.AppendLine(".tree { display: inline-block; min-width: max-content; user-select: none; }"); 
             sb.AppendLine(".tree ul { padding-top: 20px; position: relative; transition: all 0.5s; display: flex; justify-content: center; padding-left: 0; }");
             sb.AppendLine(".tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0; transition: all 0.5s; }");
@@ -323,7 +330,6 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("    <button class='modal-close' style='position:absolute; right:15px; top:15px; border:none; background:none; font-size:20px; cursor:pointer;' onclick='fecharModal()'>×</button>");
             sb.AppendLine("    <h2>Configurações do Perfil</h2>");
             
-            // SESSÃO 1: PERFIL
             sb.AppendLine("    <div class='form-group'><label>Nome de Exibição:</label><input type='text' id='input-new-name'></div>");
             sb.AppendLine("    <div class='form-group'><label>Nova Foto (Arquivo):</label><input type='file' id='input-photo-file' accept='image/*'></div>");
             sb.AppendLine("    <div class='crop-container' id='crop-container'><img id='crop-image' src=''></div>");
@@ -331,8 +337,7 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("    <div id='modal-msg-perfil' style='margin-top:10px; font-size:13px; text-align:center; display:none;'></div>");
             sb.AppendLine("    <hr style='border:none; border-top:1px solid #eee; margin: 20px 0;'>");
             
-            // SESSÃO 2: SENHA
-            sb.AppendLine("    <button class='btn-save-settings' style='background:#6c757d; margin-top:0;' onclick='toggleSenhaSection()'>Trocar Senha de Acesso</button>");
+            sb.AppendLine($"    <button class='btn-toggle-senha' onclick='toggleSenhaSection()'>{iconPadlock} Trocar Senha de Acesso</button>");
             sb.AppendLine("    <div id='senha-section' style='display:none; margin-top:15px; padding:15px; background:#f8f9fa; border-radius:8px; border:1px solid #ddd;'>");
             sb.AppendLine("      <h3 style='font-size:14px; color:#555; margin-top:0; margin-bottom:15px;'>Segurança</h3>");
             sb.AppendLine("      <div class='form-group'><label>Senha Atual:</label><div class='pass-wrapper'><input type='password' id='input-current-pass'><span class='eye-icon' onclick='toggleEye(\"input-current-pass\", this)'>" + iconEyeOpen + "</span></div></div>");
@@ -344,14 +349,12 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("  </div>");
             sb.AppendLine("</div>");
 
-            // SESSÃO 3: NAVEGACAO
             sb.AppendLine("<div class='zoom-controls'>");
-            sb.AppendLine("  <button onclick='mudarZoom(0.2)' title='Aproximar'>+</button>");
-            sb.AppendLine("  <button onclick='mudarZoom(-0.2)' title='Afastar'>-</button>");
-            sb.AppendLine($"  <button class='reset-btn' onclick='recolherTudo()' title='Recolher Organograma e Centralizar'>{iconResetButton}</button>");
+            sb.AppendLine("  <button onclick='mudarZoom(0.2)' onmousedown='event.preventDefault()' title='Aproximar'>+</button>");
+            sb.AppendLine("  <button onclick='mudarZoom(-0.2)' onmousedown='event.preventDefault()' title='Afastar'>-</button>");
+            sb.AppendLine($"  <button class='reset-btn' onclick='recolherTudo()' onmousedown='event.preventDefault()' title='Recolher Organograma e Centralizar'>{iconResetButton}</button>");
             sb.AppendLine("</div>");
 
-            // SESSÃO 4: ASSINATURA|MARCA D'AGUA
             sb.AppendLine("<div class='watermark'>");
             sb.AppendLine("  <div class='watermark-title'>Automatizado e Desenvolvido por <strong>Gabriel Arruda</strong></div>");
             sb.AppendLine("  <div class='watermark-links'>");
@@ -363,8 +366,6 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("<div id='map-container'><div class='tree-wrapper' id='tree-wrapper'><div class='tree'><ul>");
             RenderizarSetorHtml(setorRaiz, sb);
             sb.AppendLine("</ul></div></div></div>");
-
-            // JS criptografado
 
             sb.AppendLine(@"<script type='module'>
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
@@ -449,7 +450,26 @@ namespace Organograma_SEI_SEE
             section.style.display = section.style.display === 'none' ? 'block' : 'none';
         };
 
-        // Função exclusiva para Salvar NOME e FOTO
+        document.getElementById('input-photo-file').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if(file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const img = document.getElementById('crop-image');
+                    img.src = event.target.result;
+                    const container = document.getElementById('crop-container');
+                    container.style.display = 'block';
+                    
+                    if(cropper) cropper.destroy();
+                    
+                    setTimeout(() => {
+                        cropper = new Cropper(img, { aspectRatio: 1, viewMode: 1, autoCropArea: 1 });
+                    }, 50);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
         window.salvarPerfil = async function() {
             const user = auth.currentUser;
             const newName = document.getElementById('input-new-name').value.trim();
@@ -479,7 +499,6 @@ namespace Organograma_SEI_SEE
             }
         };
 
-        // Função exclusiva para Salvar a SENHA!!!!
         window.salvarSenha = async function() {
             const user = auth.currentUser;
             const currentPass = document.getElementById('input-current-pass').value;
@@ -501,12 +520,10 @@ namespace Organograma_SEI_SEE
                 
                 msgBox.style.color = 'green'; msgBox.innerText = 'Senha alterada com sucesso!';
                 
-                // Limpa os campos de senha por segurança
                 document.getElementById('input-current-pass').value = '';
                 document.getElementById('input-new-pass').value = '';
                 document.getElementById('input-confirm-pass').value = '';
                 
-                // Esconde a aba de senha depois de 2 segundos
                 setTimeout(() => { 
                     document.getElementById('senha-section').style.display = 'none'; 
                     msgBox.style.display = 'none'; 
@@ -641,20 +658,64 @@ namespace Organograma_SEI_SEE
                 if(tooltip) { document.querySelectorAll('.show-pinned').forEach(el => el.classList.remove('show-pinned')); tooltip.classList.add('show-pinned'); wrapper.classList.add('pinned-mode'); }
             }
             
-            currentZoom = 1; document.getElementById('tree-wrapper').style.transform = `scale(1)`; 
             setTimeout(() => { 
-                const mapContainer = document.getElementById('map-container'); let el = box; let offsetLeft = 0; let offsetTop = 0;
-                while(el && el !== mapContainer) { offsetLeft += el.offsetLeft; offsetTop += el.offsetTop; el = el.offsetParent; }
-                const centerX = offsetLeft + (box.offsetWidth / 2); const centerY = offsetTop + (box.offsetHeight / 2) - 100;
-                mapContainer.scrollTo({ left: centerX - (mapContainer.clientWidth / 2), top: centerY - (mapContainer.clientHeight / 2), behavior: 'smooth' });
+                const mapContainer = document.getElementById('map-container'); 
+                const wrapper = document.getElementById('tree-wrapper');
+                let el = box; 
+                let offsetLeft = 0; let offsetTop = 0;
+                
+                while(el && el !== wrapper && el !== mapContainer) { 
+                    offsetLeft += el.offsetLeft; 
+                    offsetTop += el.offsetTop; 
+                    el = el.offsetParent; 
+                }
+                
+                let scaledCenterX = (offsetLeft + (box.offsetWidth / 2)) * currentZoom; 
+                let scaledCenterY = (offsetTop + (box.offsetHeight / 2)) * currentZoom;
+                
+                mapContainer.scrollTo({ 
+                    left: scaledCenterX - (mapContainer.clientWidth / 2), 
+                    top: scaledCenterY - (mapContainer.clientHeight / 2) - (100 * currentZoom),
+                    behavior: 'smooth' 
+                });
             }, 300);
+            
             if(window.innerWidth < 800) fecharSidebar();
         }
 
         let currentZoom = 1;
-        window.mudarZoom = (amount) => { currentZoom += amount; if(currentZoom < 0.3) currentZoom = 0.3; if(currentZoom > 2.0) currentZoom = 2.0; document.getElementById('tree-wrapper').style.transform = `scale(${currentZoom})`; };
+        window.mudarZoom = (amount) => { 
+            const mapContainer = document.getElementById('map-container');
+            const wrapper = document.getElementById('tree-wrapper');
+
+            let oldZoom = currentZoom;
+            currentZoom += amount;
+            if(currentZoom < 0.3) currentZoom = 0.3;
+            if(currentZoom > 2.0) currentZoom = 2.0;
+
+            if(oldZoom === currentZoom) return;
+
+            let ratio = currentZoom / oldZoom;
+
+            let centerX = mapContainer.scrollLeft + mapContainer.clientWidth / 2;
+            let centerY = mapContainer.scrollTop + mapContainer.clientHeight / 2;
+
+            let newCenterX = centerX * ratio;
+            let newCenterY = centerY * ratio;
+
+            wrapper.style.transition = 'none';
+            wrapper.style.transform = `scale(${currentZoom})`;
+            
+            void wrapper.offsetWidth;
+
+            mapContainer.scrollLeft = newCenterX - mapContainer.clientWidth / 2;
+            mapContainer.scrollTop = newCenterY - mapContainer.clientHeight / 2;
+
+            setTimeout(() => {
+                wrapper.style.transition = 'transform 0.3s ease';
+            }, 50);
+        };
         
-        // RESET: RECOLHE TUDO E CENTRALIZA A CAIXA RAIZ (SEE) FECHADA
         window.recolherTudo = () => { 
             try {
                 fecharSidebar();
@@ -663,13 +724,11 @@ namespace Organograma_SEI_SEE
                 document.querySelectorAll('.show-pinned').forEach(el => el.classList.remove('show-pinned'));
                 document.querySelectorAll('.pinned-mode').forEach(el => el.classList.remove('pinned-mode'));
                 
-                // Força todos os itens da árvore a fecharem
                 document.querySelectorAll('.tree li').forEach(el => el.classList.add('collapsed')); 
                 
                 currentZoom = 1; 
                 document.getElementById('tree-wrapper').style.transform = `scale(1)`; 
                 
-                // Centralização focada na raiz fechada
                 centerMap();
             } catch(e) { console.error('Erro no Reset:', e); }
         };
@@ -690,12 +749,24 @@ namespace Organograma_SEI_SEE
 
         function centerMap() { 
             const mapContainer = document.getElementById('map-container');
+            const wrapper = document.getElementById('tree-wrapper');
             const rootBox = document.querySelector('.tree > ul > li > .box-wrapper'); 
-            if(rootBox && mapContainer) { 
+            
+            if(rootBox && mapContainer && wrapper) { 
                 let el = rootBox; let offsetLeft = 0; let offsetTop = 0;
-                while(el && el !== mapContainer) { offsetLeft += el.offsetLeft; offsetTop += el.offsetTop; el = el.offsetParent; }
-                const centerX = offsetLeft + (rootBox.offsetWidth / 2); const centerY = offsetTop + (rootBox.offsetHeight / 2) - 100; 
-                mapContainer.scrollLeft = centerX - (mapContainer.clientWidth / 2); mapContainer.scrollTop = centerY - (mapContainer.clientHeight / 2);
+                while(el && el !== wrapper && el !== mapContainer) { 
+                    offsetLeft += el.offsetLeft; 
+                    offsetTop += el.offsetTop; 
+                    el = el.offsetParent; 
+                }
+                let scaledCenterX = (offsetLeft + (rootBox.offsetWidth / 2)) * currentZoom; 
+                let scaledCenterY = (offsetTop + (rootBox.offsetHeight / 2)) * currentZoom; 
+                
+                mapContainer.scrollTo({
+                    left: scaledCenterX - (mapContainer.clientWidth / 2),
+                    top: scaledCenterY - (mapContainer.clientHeight / 2) - (100 * currentZoom),
+                    behavior: 'smooth'
+                });
             } 
         }
         
