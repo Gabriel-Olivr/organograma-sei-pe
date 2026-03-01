@@ -344,7 +344,14 @@ namespace Organograma_SEI_SEE
             sb.AppendLine("  </div>");
             sb.AppendLine("</div>");
 
-            // SESSÃO 3: ASSINATURA
+            // SESSÃO 3: NAVEGACAO
+            sb.AppendLine("<div class='zoom-controls'>");
+            sb.AppendLine("  <button onclick='mudarZoom(0.2)' title='Aproximar'>+</button>");
+            sb.AppendLine("  <button onclick='mudarZoom(-0.2)' title='Afastar'>-</button>");
+            sb.AppendLine($"  <button class='reset-btn' onclick='recolherTudo()' title='Recolher Organograma e Centralizar'>{iconResetButton}</button>");
+            sb.AppendLine("</div>");
+
+            // SESSÃO 4: ASSINATURA|MARCA D'AGUA
             sb.AppendLine("<div class='watermark'>");
             sb.AppendLine("  <div class='watermark-title'>Automatizado e Desenvolvido por <strong>Gabriel Arruda</strong></div>");
             sb.AppendLine("  <div class='watermark-links'>");
