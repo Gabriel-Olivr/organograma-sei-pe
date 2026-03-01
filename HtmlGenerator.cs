@@ -117,7 +117,7 @@ namespace Organograma_SEI_SEE
             <div class='login-box'>
                 <div class='input-group'>
                     <label>E-MAIL INSTITUCIONAL</label>
-                    <input type='email' id='email' placeholder='seu.nome@educacao.pe.gov.br' autocomplete='email'>
+                    <input type='email' id='email' placeholder='usuário@educacao.pe.gov.br' autocomplete='email'>
                 </div>
                 
                 <div class='input-group pass-wrapper'>
