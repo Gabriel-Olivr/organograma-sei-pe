@@ -195,7 +195,7 @@ namespace Organograma_SEI_SEE
         {
             GarantirPastaExiste();
 
-            string iconGear = "<img src='https://cdn-icons-png.flaticon.com/512/5046/5046461.png' width='16' height='16' alt='' title='' class='img-small'>";
+            string iconGear = "<svg viewBox='0 0 512 512' width='16' height='16' fill='currentColor'><path d='M487.4 315.7l-42.6-24.6c2.3-11.7 3.5-23.8 3.5-36.1s-1.2-24.4-3.5-36.1l42.6-24.6c19.6-11.3 26.3-36.4 15-56l-40-69.3c-11.3-19.6-36.4-26.3-56-15l-42.6 24.6c-19.1-13.3-40-23.7-62.2-30.8V0h-80v47.7c-22.2 7.1-43.1 17.5-62.2 30.8L118.6 54c-19.6-11.3-44.7-4.6-56 15l-40 69.3c-11.3 19.6-4.6 44.7 15 56l42.6 24.6C57.9 230.6 56.7 242.7 56.7 255s1.2 24.4 3.5 36.1l-42.6 24.6c-19.6 11.3-26.3 36.4-15 56l40 69.3c11.3 19.6 36.4 26.3 56 15l42.6-24.6c19.1 13.3 40 23.7 62.2 30.8V512h80v-47.7c22.2-7.1 43.1-17.5 62.2-30.8l42.6 24.6c19.6 11.3 44.7 4.6 56-15l40-69.3c11.4-19.6 4.7-44.7-14.9-56.1zM256 360c-57.9 0-105-47.1-105-105s47.1-105 105-105 105 47.1 105 105-47.1 105-105 105z'/></svg>";
             string iconLogout = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path><polyline points='16 17 21 12 16 7'></polyline><line x1='21' y1='12' x2='9' y2='12'></line></svg>";
             string iconGithub = "<img src='https://cdn-icons-png.flaticon.com/512/733/733609.png' width='16' height='16' alt='GitHub' title='GitHub' class='img-small'>";            
             string iconLinkedin = "<img src='https://cdn-icons-png.flaticon.com/512/1384/1384072.png' width='16' height='16' alt='LinkedIn' title='LinkedIn' class='img-small'>";            
@@ -251,23 +251,32 @@ namespace Organograma_SEI_SEE
             sb.AppendLine(".eye-icon { position: absolute; right: 10px; cursor: pointer; color: #888; display: flex; }");
             sb.AppendLine(".eye-icon:hover { color: #0088cc; }");
             sb.AppendLine(".form-group input[type='text'], .form-group input[type='file'] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 13px; }");
+            
             sb.AppendLine(".crop-container { width: 100%; max-height: 300px; margin-top: 10px; display: none; background: #eee; border-radius: 8px; }");
             sb.AppendLine("#crop-image { display: block; max-width: 100%; }"); 
+            
             sb.AppendLine(".btn-save-settings { width: 100%; padding: 10px; background: #0088cc; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 10px; font-size: 14px; transition: 0.2s; }");
             sb.AppendLine(".btn-save-settings:hover { opacity: 0.9; }");
+            
             sb.AppendLine(".btn-toggle-senha { width: 100%; padding: 10px; background: #ffffff; color: #333; border: 1px solid #ccc; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 0; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s, border-color 0.2s; }");
             sb.AppendLine(".btn-toggle-senha:hover { background: #f8f9fa; border-color: #aaa; }");
+
             sb.AppendLine(".watermark { position: fixed; bottom: 15px; right: 20px; font-size: 12px; color: #666; z-index: 1000; background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border: 1px solid #ddd; transition: all 0.3s ease; overflow: hidden; height: 18px; display: flex; flex-direction: column; pointer-events: auto; cursor: default; }");
             sb.AppendLine(".watermark:hover { height: 75px; border-color: #0088cc; }");
             sb.AppendLine(".watermark-links { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; opacity: 0; transition: opacity 0.3s; }");
             sb.AppendLine(".watermark:hover .watermark-links { opacity: 1; }");
             sb.AppendLine(".watermark-links a { text-decoration: none; color: #333; font-weight: bold; display: flex; align-items: center; gap: 5px; }");
+            
             sb.AppendLine(".zoom-controls { position: fixed; bottom: 30px; left: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); user-select: none; -webkit-user-select: none; }");
             sb.AppendLine(".zoom-controls button { width: 40px; height: 40px; background: #f0f2f5; border: 1px solid #ccc; border-radius: 4px; cursor: pointer !important; font-size: 18px; font-weight: bold; color: #333; display: flex; align-items: center; justify-content: center; padding: 0; transition: 0.2s; user-select: none !important; -webkit-user-select: none !important; outline: none; }");
             sb.AppendLine(".zoom-controls button:hover { background: #e0e4e8; }");
+            
             sb.AppendLine("#map-container { position: absolute; top: 60px; left: 0; width: 100vw; height: calc(100vh - 60px); overflow: auto; cursor: grab; background-color: #f4f7f6; box-sizing: border-box; }");
             sb.AppendLine("#map-container:active { cursor: grabbing; }");
-            sb.AppendLine(".tree-wrapper { transform-origin: 0 0; transition: transform 0.3s ease; padding: 40vh 50vw; display: inline-block; min-width: 100%; box-sizing: border-box; }"); 
+            
+            // ACELERAÇÃO DE HARDWARE ATIVADA PARA TIRAR O LAG
+            sb.AppendLine(".tree-wrapper { transform-origin: 0 0; transition: transform 0.3s ease; padding: 40vh 50vw; display: inline-block; min-width: 100%; box-sizing: border-box; will-change: transform; }"); 
+            
             sb.AppendLine(".tree { display: inline-block; min-width: max-content; user-select: none; }"); 
             sb.AppendLine(".tree ul { padding-top: 20px; position: relative; transition: all 0.5s; display: flex; justify-content: center; padding-left: 0; }");
             sb.AppendLine(".tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0; transition: all 0.5s; }");
@@ -371,7 +380,8 @@ namespace Organograma_SEI_SEE
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js';
         import { getAuth, onAuthStateChanged, signOut, updateProfile, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js';
 
-        const firebaseConfig = { apiKey: atob('QUl6YVN5RDdqNFNaaHRGQmpQZUF1RkVNRUs2Zm56UDlyX0hUWVQ4'), authDomain: 'organograma-see-pe.firebaseapp.com', projectId: 'organograma-see-pe', storageBucket: 'organograma-see-pe.firebasestorage.app', messagingSenderId: '471766110154', appId: atob('MTo0NzE3NjYxMTAxNTQ6d2ViOmEyMTU0YWYxZmI5MDk2ZmQzODQ5MzM=') };        const app = initializeApp(firebaseConfig);
+        const firebaseConfig = { apiKey: atob('QUl6YVN5RDdqNFNaaHRGQmpQZUF1RkVNRUs2Zm56UDlyX0hUWVQ4'), authDomain: 'organograma-see-pe.firebaseapp.com', projectId: 'organograma-see-pe', storageBucket: 'organograma-see-pe.firebasestorage.app', messagingSenderId: '471766110154', appId: atob('MTo0NzE3NjYxMTAxNTQ6d2ViOmEyMTU0YWYxZmI5MDk2ZmQzODQ5MzM=') };        
+        const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
         const svgUser = `<svg viewBox='0 0 24 24' width='14' height='14' stroke='currentColor' stroke-width='2' fill='none'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>`;
@@ -385,7 +395,10 @@ namespace Organograma_SEI_SEE
             }, 900000); 
         }
         
-        window.onload = resetInactivityTimer; document.onmousemove = resetInactivityTimer; document.onkeydown = resetInactivityTimer; document.onclick = resetInactivityTimer; document.onscroll = resetInactivityTimer;
+        // OTIMIZAÇÃO: onmousemove retirado para impedir travamentos de CPU durante o arrasto do mapa
+        window.onload = resetInactivityTimer; 
+        document.onkeydown = resetInactivityTimer; 
+        document.onclick = resetInactivityTimer; 
 
         onAuthStateChanged(auth, (user) => {
             if (user) { 
@@ -737,10 +750,15 @@ namespace Organograma_SEI_SEE
         let isDown = false; let startX, startY, scrollLeft, scrollTop;
         slider.addEventListener('mousedown', (e) => {
             if (e.target.closest('.tooltip-content') || e.target.closest('.zoom-controls') || e.target.closest('.modal-overlay') || e.target.closest('.watermark') || e.target.closest('.sidebar')) return;
-            isDown = true; startX = e.pageX - slider.offsetLeft; startY = e.pageY - slider.offsetTop; scrollLeft = slider.scrollLeft; scrollTop = slider.scrollTop;
+            isDown = true; 
+            startX = e.pageX - slider.offsetLeft; 
+            startY = e.pageY - slider.offsetTop; 
+            scrollLeft = slider.scrollLeft; 
+            scrollTop = slider.scrollTop;
+            slider.style.cursor = 'grabbing';
         });
-        slider.addEventListener('mouseleave', () => isDown = false);
-        slider.addEventListener('mouseup', () => isDown = false);
+        slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+        slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
         slider.addEventListener('mousemove', (e) => {
             if(!isDown) return; e.preventDefault();
             const x = e.pageX - slider.offsetLeft; const y = e.pageY - slider.offsetTop;
