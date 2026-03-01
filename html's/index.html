@@ -15,10 +15,11 @@
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            object-position: center; 
+            object-position: center center; 
             opacity: 0; 
             animation: fade 35s infinite; 
             image-rendering: -webkit-optimize-contrast; 
+            image-rendering: crisp-edges;
         }
 
         .carousel img:nth-child(1) { animation-delay: 0s; }
@@ -38,35 +39,27 @@
         }
 
         .overlay-gradient { position: absolute; bottom: 0; left: 0; width: 100%; height: 30%; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); z-index: 2; pointer-events: none; }
-        
-        .footer-text { 
-            position: relative; 
-            z-index: 3; 
-            color: white; 
-            font-size: 8px; 
-            padding: 10px 20px; 
-            line-height: 1; 
-            font-weight: 500; 
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
-            user-select: none;
-            white-space: nowrap;
-            width: 100%;
-            text-align: center;
-        }
+        .footer-text { position: relative; z-index: 3; color: white; font-size: 8.5px; padding: 15px 20px; line-height: 1; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); user-select: none; white-space: nowrap; width: 100%; text-align: center;}
 
         .right-panel { flex: 3; background-color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-width: 420px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); z-index: 10; overflow-y: auto; overflow-x: hidden; padding: 20px 0; border-left: 1px solid #ddd; user-select: none; cursor: default;}
+        
         .header-logos { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; margin-bottom: 30px; pointer-events: none; }
         .umct-logo-container { width: 95%; display: flex; align-items: center; justify-content: center; overflow: visible; padding: 10px 0; }
-        .umct-logo-img { width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-        .see-logo { height: 90px; max-width: 85%; object-fit: contain; margin-top: 1px; }
+        .umct-logo-img { width: 90%; height: auto; max-height: 250px; object-fit: contain; }
+        .see-logo { height: 75px; max-width: 85%; object-fit: contain; margin-top: 10px; }
+
         .login-box { background: #f8f9fa; padding: 40px; border-radius: 12px; width: 80%; max-width: 320px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
         .input-group { margin-bottom: 20px; text-align: left; position: relative; }
         .input-group label { display: block; color: #555; font-size: 11px; font-weight: bold; margin-bottom: 8px; letter-spacing: 1px; cursor: default; }
         .input-group input { width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 14px; background: white; color: #333; outline: none; transition: 0.2s; user-select: text; cursor: text !important; }
         .input-group input:focus { border-color: #0088cc; box-shadow: 0 0 0 3px rgba(0,136,204,0.1); }
+        
         .pass-wrapper .eye-icon { position: absolute; right: 12px; top: 32px; cursor: pointer !important; color: #999; display: flex; }
+
         button { width: 100%; padding: 14px; background-color: #0088cc; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer !important; font-weight: bold; margin-top: 10px; transition: 0.3s; }
         button:hover { background-color: #005580; transform: translateY(-1px); }
+        
         #erro-msg { color: #d9534f; margin-top: 15px; display: none; font-size: 13px; font-weight: bold; }
         .forgot-pass { margin-top: 30px; color: #0088cc; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.2s; cursor: pointer !important; }
         .forgot-pass:hover { text-decoration: underline; color: #005580; }
@@ -91,9 +84,7 @@
                 <img src='https://www.bwallpaperhd.com/wp-content/uploads/2018/06/CaruaruClayDolls.jpg' alt='Imagem 7'>
             </div>
             <div class='overlay-gradient'></div>
-            <div class='footer-text'>
-                As informações pertencem às suas fontes originais. A arquitetura, metodologia e design desta plataforma são propriedade intelectual de Gabriel Estevam, protegidos pela Lei de Direitos Autorais (Lei 9.610/98). © 2026, Gabriel Estevam. Todos os direitos reservados.
-            </div>
+            <div class='footer-text'>As informações pertencem às suas fontes originais. A arquitetura, metodologia e design desta plataforma são propriedade intelectual de Gabriel Estevam, protegidos pela Lei de Direitos Autorais (Lei 9.610/98). © 2026, Gabriel Estevam. Todos os direitos reservados.</div>
         </div>
 
         <div class='right-panel'>
@@ -101,7 +92,7 @@
                 <div class='umct-logo-container'>
                     <img src='Nova Logo_UMCT.png' alt='Logo UMCT' class='umct-logo-img'>
                 </div>
-                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/logo_Secretaria-de-Educacao_CMYK_para-fundo-branco-2-scaled.png' alt='Logo SEE PE' class='see-logo'>
+                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2021/01/logo_Secretaria-de-Educacao-1.png' alt='Logo SEE PE' class='see-logo'>
             </div>
 
             <div class='login-box'>

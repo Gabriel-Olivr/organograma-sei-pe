@@ -33,10 +33,11 @@ namespace Organograma_SEI_SEE
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            object-position: center; 
+            object-position: center center; 
             opacity: 0; 
             animation: fade 35s infinite; 
             image-rendering: -webkit-optimize-contrast; 
+            image-rendering: crisp-edges;
         }
 
         .carousel img:nth-child(1) { animation-delay: 0s; }
@@ -56,35 +57,27 @@ namespace Organograma_SEI_SEE
         }
 
         .overlay-gradient { position: absolute; bottom: 0; left: 0; width: 100%; height: 30%; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); z-index: 2; pointer-events: none; }
-        
-        .footer-text { 
-            position: relative; 
-            z-index: 3; 
-            color: white; 
-            font-size: 8px; 
-            padding: 10px 20px; 
-            line-height: 1; 
-            font-weight: 500; 
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
-            user-select: none;
-            white-space: nowrap;
-            width: 100%;
-            text-align: center;
-        }
+        .footer-text { position: relative; z-index: 3; color: white; font-size: 8.5px; padding: 15px 20px; line-height: 1; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); user-select: none; white-space: nowrap; width: 100%; text-align: center;}
 
         .right-panel { flex: 3; background-color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-width: 420px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); z-index: 10; overflow-y: auto; overflow-x: hidden; padding: 20px 0; border-left: 1px solid #ddd; user-select: none; cursor: default;}
+        
         .header-logos { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; margin-bottom: 30px; pointer-events: none; }
         .umct-logo-container { width: 95%; display: flex; align-items: center; justify-content: center; overflow: visible; padding: 10px 0; }
-        .umct-logo-img { width: 100%; height: auto; max-height: 400px; object-fit: contain; }
-        .see-logo { height: 90px; max-width: 85%; object-fit: contain; margin-top: 1px; }
+        .umct-logo-img { width: 90%; height: auto; max-height: 250px; object-fit: contain; }
+        .see-logo { height: 75px; max-width: 85%; object-fit: contain; margin-top: 10px; }
+
         .login-box { background: #f8f9fa; padding: 40px; border-radius: 12px; width: 80%; max-width: 320px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
         .input-group { margin-bottom: 20px; text-align: left; position: relative; }
         .input-group label { display: block; color: #555; font-size: 11px; font-weight: bold; margin-bottom: 8px; letter-spacing: 1px; cursor: default; }
         .input-group input { width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 14px; background: white; color: #333; outline: none; transition: 0.2s; user-select: text; cursor: text !important; }
         .input-group input:focus { border-color: #0088cc; box-shadow: 0 0 0 3px rgba(0,136,204,0.1); }
+        
         .pass-wrapper .eye-icon { position: absolute; right: 12px; top: 32px; cursor: pointer !important; color: #999; display: flex; }
+
         button { width: 100%; padding: 14px; background-color: #0088cc; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer !important; font-weight: bold; margin-top: 10px; transition: 0.3s; }
         button:hover { background-color: #005580; transform: translateY(-1px); }
+        
         #erro-msg { color: #d9534f; margin-top: 15px; display: none; font-size: 13px; font-weight: bold; }
         .forgot-pass { margin-top: 30px; color: #0088cc; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.2s; cursor: pointer !important; }
         .forgot-pass:hover { text-decoration: underline; color: #005580; }
@@ -109,9 +102,7 @@ namespace Organograma_SEI_SEE
                 <img src='https://www.bwallpaperhd.com/wp-content/uploads/2018/06/CaruaruClayDolls.jpg' alt='Imagem 7'>
             </div>
             <div class='overlay-gradient'></div>
-            <div class='footer-text'>
-                As informações pertencem às suas fontes originais. A arquitetura, metodologia e design desta plataforma são propriedade intelectual de Gabriel Estevam, protegidos pela Lei de Direitos Autorais (Lei 9.610/98). © 2026, Gabriel Estevam. Todos os direitos reservados.
-            </div>
+            <div class='footer-text'>As informações pertencem às suas fontes originais. A arquitetura, metodologia e design desta plataforma são propriedade intelectual de Gabriel Estevam, protegidos pela Lei de Direitos Autorais (Lei 9.610/98). © 2026, Gabriel Estevam. Todos os direitos reservados.</div>
         </div>
 
         <div class='right-panel'>
@@ -119,7 +110,7 @@ namespace Organograma_SEI_SEE
                 <div class='umct-logo-container'>
                     <img src='Nova Logo_UMCT.png' alt='Logo UMCT' class='umct-logo-img'>
                 </div>
-                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/logo_Secretaria-de-Educacao_CMYK_para-fundo-branco-2-scaled.png' alt='Logo SEE PE' class='see-logo'>
+                <img src='https://portal.educacao.pe.gov.br/wp-content/uploads/2021/01/logo_Secretaria-de-Educacao-1.png' alt='Logo SEE PE' class='see-logo'>
             </div>
 
             <div class='login-box'>
@@ -203,7 +194,9 @@ namespace Organograma_SEI_SEE
         {
             GarantirPastaExiste();
 
-            string iconGear = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><circle cx='12' cy='12' r='3'></circle><path d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1-2 2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'></path></svg>";
+            // ÍCONE DE ENGRENAGEM AJMAL NAHA (FLATICON) - CÓDIGO OFICIAL CONVERTIDO
+            string iconGear = "<svg viewBox='0 0 512 512' width='16' height='16' fill='currentColor'><path d='M487.4 315.7l-42.6-24.6c2.3-11.7 3.5-23.8 3.5-36.1s-1.2-24.4-3.5-36.1l42.6-24.6c19.6-11.3 26.3-36.4 15-56l-40-69.3c-11.3-19.6-36.4-26.3-56-15l-42.6 24.6c-19.1-13.3-40-23.7-62.2-30.8V0h-80v47.7c-22.2 7.1-43.1 17.5-62.2 30.8L118.6 54c-19.6-11.3-44.7-4.6-56 15l-40 69.3c-11.3 19.6-4.6 44.7 15 56l42.6 24.6C57.9 230.6 56.7 242.7 56.7 255s1.2 24.4 3.5 36.1l-42.6 24.6c-19.6 11.3-26.3 36.4-15 56l40 69.3c11.3 19.6 36.4 26.3 56 15l42.6-24.6c19.1 13.3 40 23.7 62.2 30.8V512h80v-47.7c22.2-7.1 43.1-17.5 62.2-30.8l42.6 24.6c19.6 11.3 44.7 4.6 56-15l40-69.3c11.4-19.6 4.7-44.7-14.9-56.1zM256 360c-57.9 0-105-47.1-105-105s47.1-105 105-105 105 47.1 105 105-47.1 105-105 105z'/></svg>";
+            
             string iconLogout = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'></path><polyline points='16 17 21 12 16 7'></polyline><line x1='21' y1='12' x2='9' y2='12'></line></svg>";
             string iconGithub = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path></svg>";
             string iconLinkedin = "<svg viewBox='0 0 24 24' width='16' height='16' stroke='currentColor' stroke-width='2' fill='none'><path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'></path><rect x='2' y='9' width='4' height='12'></rect><circle cx='4' cy='4' r='2'></circle></svg>";
@@ -273,7 +266,7 @@ namespace Organograma_SEI_SEE
             sb.AppendLine(".tree-wrapper { transform-origin: top center; transition: transform 0.3s ease; padding: 40vh 50vw; display: inline-block; min-width: 100%; box-sizing: border-box; }"); 
             sb.AppendLine(".tree { display: inline-block; min-width: max-content; user-select: none; }"); 
             sb.AppendLine(".tree ul { padding-top: 20px; position: relative; transition: all 0.5s; display: flex; justify-content: center; padding-left: 0; }");
-            sb.AppendLine(".tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0 5px; transition: all 0.5s; }");
+            sb.AppendLine(".tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0; transition: all 0.5s; }");
             sb.AppendLine(".tree li::before, .tree li::after { content: ''; position: absolute; top: 0; right: 50%; border-top: 2px solid #aaa; width: 50%; height: 20px; }");
             sb.AppendLine(".tree li::after { right: auto; left: 50%; border-left: 2px solid #aaa; }");
             sb.AppendLine(".tree li:only-child::after, .tree li:only-child::before { display: none; }");
@@ -287,24 +280,17 @@ namespace Organograma_SEI_SEE
             sb.AppendLine(".sector-box { width: 220px; min-height: 80px; border: 2px solid #0088cc; padding: 10px; color: #333; font-weight: bold; font-size: 13px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 8px; background-color: white; transition: all 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); word-wrap: break-word; user-select: none !important; -webkit-user-select: none !important; cursor: pointer !important; }");
             sb.AppendLine(".sector-box * { user-select: none !important; -webkit-user-select: none !important; cursor: pointer !important; }"); 
             sb.AppendLine(".has-children > .box-wrapper > .sector-box { border-bottom: 5px solid #0088cc; }"); 
-            
-            // ========================================================================
-            // CORREÇÃO DO DESTAQUE: REMOVIDO SCALE, APENAS MUDANÇA DE COR
-            // ========================================================================
             sb.AppendLine(".highlight { background-color: #fffac0 !important; border-color: #ff9800 !important; z-index: 10; }"); 
-            
             sb.AppendLine(".btn-pessoas { margin-top: 8px; font-size: 11px; background: #eee; border-radius: 12px; padding: 4px 10px; color: #555; z-index: 20; border: 1px solid #ccc; pointer-events: auto; }");
             sb.AppendLine(".tooltip-content { display: none; width: 300px; background-color: #2c3e50; color: #fff; text-align: left; border-radius: 8px; padding: 15px; position: absolute; z-index: 9999; top: 110%; left: 50%; transform: translateX(-50%); box-shadow: 0px 10px 20px rgba(0,0,0,0.4); max-height: 260px; overflow-y: auto; font-weight: normal; font-size: 12px; cursor: default !important; }");
             sb.AppendLine(".tooltip-content * { cursor: default !important; user-select: text !important; -webkit-user-select: text !important; }"); 
             sb.AppendLine(".tooltip-content.show-pinned { display: block; border: 2px solid #ffeb3b; }"); 
             sb.AppendLine(".box-wrapper:hover .tooltip-content:not(.pinned-mode) { display: block; }"); 
-            
             sb.AppendLine(".tree .tooltip-content ul.lista-servidores { display: block !important; width: 100% !important; padding: 0 !important; margin: 0 !important; position: static !important; }");
             sb.AppendLine(".tree .tooltip-content ul.lista-servidores li.item-servidor { display: block !important; width: 100% !important; float: none !important; clear: both !important; text-align: left !important; padding: 10px 0 !important; margin: 0 !important; border-bottom: 1px solid #4a6278 !important; position: static !important; box-sizing: border-box !important; line-height: 1.4 !important; }");
             sb.AppendLine(".tree .tooltip-content ul::before, .tree .tooltip-content ul::after, .tree .tooltip-content li::before, .tree .tooltip-content li::after { display: none !important; content: none !important; border: none !important; }");
             sb.AppendLine(".tree .tooltip-content ul.lista-servidores li.item-servidor:last-child { border-bottom: none !important; }");
             sb.AppendLine(".admin-badge { background-color: #ff4d4d; color: white; padding: 2px 4px; border-radius: 3px; font-size: 9px; margin-left: 5px; font-weight: bold; float: right; }");
-            
             sb.AppendLine("</style></head><body>");
             
             sb.AppendLine("<div class='top-bar'>");
@@ -636,6 +622,7 @@ namespace Organograma_SEI_SEE
         let currentZoom = 1;
         window.mudarZoom = (amount) => { currentZoom += amount; if(currentZoom < 0.3) currentZoom = 0.3; if(currentZoom > 2.0) currentZoom = 2.0; document.getElementById('tree-wrapper').style.transform = `scale(${currentZoom})`; };
         
+        // RESET ABSOLUTO: RECOLHE TUDO E CENTRALIZA NA CAIXA RAIZ (SEE) FECHADA
         window.recolherTudo = () => { 
             try {
                 fecharSidebar();
@@ -643,13 +630,14 @@ namespace Organograma_SEI_SEE
                 document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
                 document.querySelectorAll('.show-pinned').forEach(el => el.classList.remove('show-pinned'));
                 document.querySelectorAll('.pinned-mode').forEach(el => el.classList.remove('pinned-mode'));
-                document.querySelectorAll('.tree li').forEach(el => el.classList.add('collapsed')); 
                 
-                const raiz = document.querySelector('.tree > ul > li');
-                if(raiz) raiz.classList.remove('collapsed');
+                // Força todos os itens da árvore a fecharem
+                document.querySelectorAll('.tree li').forEach(el => el.classList.add('collapsed')); 
                 
                 currentZoom = 1; 
                 document.getElementById('tree-wrapper').style.transform = `scale(1)`; 
+                
+                // Centralização focada na raiz fechada
                 centerMap();
             } catch(e) { console.error('Erro no Reset:', e); }
         };
