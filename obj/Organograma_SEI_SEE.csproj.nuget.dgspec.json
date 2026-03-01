@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\Organograma_SEI_SEE\\Organograma_SEI_SEE.csproj": {}
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\organograma-sei-pe\\Organograma_SEI_SEE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\Organograma_SEI_SEE\\Organograma_SEI_SEE.csproj": {
+    "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\organograma-sei-pe\\Organograma_SEI_SEE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\Organograma_SEI_SEE\\Organograma_SEI_SEE.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\organograma-sei-pe\\Organograma_SEI_SEE.csproj",
         "projectName": "Organograma_SEI_SEE",
-        "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\Organograma_SEI_SEE\\Organograma_SEI_SEE.csproj",
+        "projectPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\organograma-sei-pe\\Organograma_SEI_SEE.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\Organograma_SEI_SEE\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\PROJETOS\\organograma-sei-pe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config"

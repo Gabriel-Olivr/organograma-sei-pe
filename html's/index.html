@@ -116,7 +116,7 @@
                     <span class='eye-icon' id='toggle-eye'><svg viewBox='0 0 24 24' width='18' height='18' stroke='currentColor' stroke-width='2' fill='none'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'></path><circle cx='12' cy='12' r='3'></circle></svg></span>
                 </div>
                 
-                <button id='btn-login'>ACESSAR SISTEMA</button>
+                <button id='btn-login'>LOGIN</button>
                 <p id='erro-msg'>Usuário ou senha incorretos.</p>
             </div>
 
@@ -165,7 +165,7 @@
             signInWithEmailAndPassword(auth, email, senha)
                 .then(() => { window.location.href = 'organograma.html'; })
                 .catch((error) => {
-                    btn.innerText = 'ACESSAR SISTEMA';
+                    btn.innerText = 'LOGIN';
                     btn.disabled = false;
                     document.getElementById('erro-msg').style.display = 'block';
                 });
