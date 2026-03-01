@@ -183,7 +183,7 @@ namespace Organograma_SEI_SEE
             signInWithEmailAndPassword(auth, email, senha)
                 .then(() => { window.location.href = 'organograma.html'; })
                 .catch((error) => {
-                    btn.innerText = 'ACESSAR SISTEMA';
+                    btn.innerText = 'LOGIN';
                     btn.disabled = false;
                     document.getElementById('erro-msg').style.display = 'block';
                 });

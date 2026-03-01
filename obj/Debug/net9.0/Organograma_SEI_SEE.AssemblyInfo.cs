@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Organograma_SEI_SEE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fde0a7babf081025c0e20504bcae028abfe81a49")]
 [assembly: System.Reflection.AssemblyProductAttribute("Organograma_SEI_SEE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Organograma_SEI_SEE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
